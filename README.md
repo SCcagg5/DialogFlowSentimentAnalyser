@@ -9,7 +9,7 @@ Create an account key and allow language API using:
 
 To launch the app use: `docker-compose up -d --build` from inside the git directory
 
- * _You **NEED** to store your GOOGLE_APPLICATION_CREDENTIALS.json inside the root of the repo_
+ * _You **NEED** to store your `GOOGLE_APPLICATION_CREDENTIALS.json` inside the root of the repo_
  * *There is two mode **PROD** and **DEV** :*
    * _**PROD** clone and run the actual git repo_
    * _**DEV** is using your locals files to run_
