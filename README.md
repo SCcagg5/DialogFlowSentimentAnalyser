@@ -39,9 +39,12 @@ Route| Method| Content Type |Parameters| Description |
 {
   "sentence" : "*YOUR TEXT*",
   "lang": "YOUR_LANG", // ["fr", "en"]
-  "token": "USER'S TOKEN" //if NULL the app return a new one
+  "token": "USER'S TOKEN" //if NULL the app return a new one 
 }
 ```
+
+Warning: * the token params is changed every new call
+         * the first part (before the `_`) should'nt change, if it change report bug
 
 ### Launching the App:  
 
