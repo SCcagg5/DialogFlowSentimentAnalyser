@@ -44,7 +44,7 @@ Route| Method| Content Type |Parameters| Description |
 ```
 
 **Warning**: 
-  * the token params is changed every new call
+  * the `token` parameter is changed every new call
   * the first part (before the `_`) should'nt change, if it change report bug
 
 ### Launching the App:  
