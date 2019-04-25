@@ -39,7 +39,7 @@ Route| Method| Content Type |Parameters| Description |
 {
   "sentence" : "*YOUR TEXT*",
   "lang": "YOUR_LANG", // ["fr", "en"]
-  "token": "USER'S TOKEN" //if None the app return a new one
+  "token": "USER'S TOKEN" //if NULL the app return a new one
 }
 ```
 
