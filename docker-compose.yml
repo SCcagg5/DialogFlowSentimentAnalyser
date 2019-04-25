@@ -10,4 +10,5 @@ services:
           environment:
             - PROD=0
           volumes:
-            - ./:/home/api/DialogFlowSentimentAnalyser
+            - ./:/home/api/DialogFlowSentimentAnalyser/
+            - ./GOOGLE_APPLICATION_CREDENTIALS.json:/home/api/secret.json
