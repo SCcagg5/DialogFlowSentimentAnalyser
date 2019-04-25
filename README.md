@@ -43,7 +43,7 @@ Route| Method| Content Type |Parameters| Description |
 }
 ```
 
-Warning: 
+**Warning**: 
   * the token params is changed every new call
   * the first part (before the `_`) should'nt change, if it change report bug
 
