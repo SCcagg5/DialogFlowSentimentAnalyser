@@ -24,12 +24,43 @@ Route| Method| Content Type |Parameters| Description |
 ### Return example:
 **`/sentence/` True**
 ```javascript
-
+{
+    "succes": true,
+    "error": null,
+    "queryInfos": {
+        "params": {
+            "sentence": "je me sens mieux",
+            "lang": "fr"
+        },
+        "route": "/sentence/"
+    },
+    "data": {
+        "user": {
+            "negatif": false,
+            "token": "47609f83e45043e4b0104f856d7413a7_0.0_1",
+            "score": 0
+        },
+        "sentence": "je me sens mieux",
+        "score": 0
+    },
+    "status": 200
+}
 ```
 
 **`/sentence/` False**
 ```javascript
-
+{
+    "succes": false,
+    "error": "Missing parameter : lang",
+    "queryInfos": {
+        "params": {
+            "sentence": "je me sens mieux"
+        },
+        "route": "/sentence/"
+    },
+    "data": null,
+    "status": 400
+}
 ```
 
 ### Launching the App:  
@@ -41,5 +72,12 @@ From inside the `back-end` dir:
 
 ## Curl examples
 ```shell
-
+curl -X POST \
+  http://localhost:5000/sentence/ \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"token": "47609f83e45043e4b0104f856d7413a7_-0.7_1",
+	"sentence": "je me sens mieux",
+	"lang": "fr"
+}'
 ```
