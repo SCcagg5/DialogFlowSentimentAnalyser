@@ -16,6 +16,6 @@ RUN mkdir /home/api
 RUN apt-get install nano
 
 ENTRYPOINT cd /home/api/ && cp /home/api/secret.json /home/api/secret_copy.json && \
-	   if [ "$PROD" -eq 1 ]; then rm -r DialogFlowSentimentAnalyser/back-end; mkdir prod; cd prod; git clone --quiet https://github.com/SCcagg5/DialogFlowSentimentAnalyser > /dev/null; fi && \
+	   if [ "$PROD" -eq 1 ]; then mkdir prod; cd prod; git clone --quiet https://github.com/SCcagg5/DialogFlowSentimentAnalyser > /dev/null; fi && \
 	   cd ./DialogFlowSentimentAnalyser/back-end/src && pm2 start --interpreter python3 server.py --watch > /dev/null & > /dev/null; \
 	   /bin/bash
