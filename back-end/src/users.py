@@ -20,7 +20,7 @@ class user:
              if score <= -0.6 and self.sen > 0.2:
                self.sen = -0.200
                self.pow = 1
-             elif score <= 0.6 and self.sen < -0.2:
+             elif score >= 0.6 and self.sen < -0.2:
                self.sen = 0.0
                self.pow = 1
              else:
