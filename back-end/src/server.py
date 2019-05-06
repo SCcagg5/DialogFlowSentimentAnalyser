@@ -5,7 +5,6 @@ from users import user
 from analysis import sentiment
 import os
 
-"""route to test if api is up"""
 @get('/test/')
 @post('/test/')
 def base():
