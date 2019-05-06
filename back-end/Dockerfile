@@ -1,19 +1,20 @@
 FROM debian:jessie AS BACK_DFC
 
-MAINTAINER Courtel Eliot <eliot.courtel@wanadoo.fr>
+LABEL maintainer="Courtel Eliot"
+LABEL maintainermail="eliot.courtel@wanadoo.fr"
 
-RUN apt-get update && apt-get install curl -y
+RUN apt-get update --no-install-recommends && apt-get install curl -y --no-install-recommends
 RUN cd ~ && curl -sL https://deb.nodesource.com/setup_10.x | bash -
-RUN apt-get install nodejs build-essential -y
+RUN apt-get install nodejs build-essential -y --no-install-recommends
 RUN npm install -g pm2
-RUN apt-get install python3 python3-pip -y
-RUN apt-get install git -y
+RUN apt-get install python3 python3-pip -y --no-install-recommends
+RUN apt-get install git -y --no-install-recommends
 RUN pip3 install requests bottle uuid
-RUN easy_install3 -U pip
+RUN easy_install3 -U pip 
 RUN pip install google-cloud-language
 RUN apt-get install openssh-client
 RUN mkdir /home/api
-RUN apt-get install nano
+RUN apt-get install nano -y --no-install-recommends
 
 ENTRYPOINT cd /home/api/ && cp /home/api/secret.json /home/api/secret_copy.json && \
 	   if [ "$PROD" -eq 1 ]; then mkdir prod; cd prod; git clone --quiet https://github.com/SCcagg5/DialogFlowSentimentAnalyser > /dev/null; fi && \
