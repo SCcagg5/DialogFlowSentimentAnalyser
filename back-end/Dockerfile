@@ -12,7 +12,7 @@ RUN apt-get install git -y --no-install-recommends
 RUN pip3 install requests bottle uuid
 RUN easy_install3 -U pip 
 RUN pip install google-cloud-language
-RUN apt-get install openssh-client
+RUN apt-get install openssh-client -y --no-install-recommends
 RUN mkdir /home/api
 RUN apt-get install nano -y --no-install-recommends
 
