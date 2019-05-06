@@ -15,6 +15,7 @@ RUN pip install google-cloud-language
 RUN apt-get install openssh-client -y --no-install-recommends
 RUN mkdir /home/api
 RUN apt-get install nano -y --no-install-recommends
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT cd /home/api/ && cp /home/api/secret.json /home/api/secret_copy.json && \
 	   if [ "$PROD" -eq 1 ]; then mkdir prod; cd prod; git clone --quiet https://github.com/SCcagg5/DialogFlowSentimentAnalyser > /dev/null; fi && \
