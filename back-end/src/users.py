@@ -8,7 +8,7 @@ class user:
              self.lang = lang
              if tok is not None:
                 tok = tok.split('_')
-                if len(tok) is 3:
+                if len(tok) == 3:
                        self.id = tok[0]
                        self.sen = float(tok[1])
                        self.pow = int(tok[2])
