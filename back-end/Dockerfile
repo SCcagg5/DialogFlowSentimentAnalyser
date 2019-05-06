@@ -3,7 +3,7 @@ FROM debian:jessie AS BACK_DFC
 LABEL maintainer="Courtel Eliot"
 LABEL maintainermail="eliot.courtel@wanadoo.fr"
 
-RUN apt-get update --no-install-recommends && apt-get install curl -y --no-install-recommends
+RUN apt-get update --no-install-recommends && apt-get install curl -y --no-install-recommends && apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN cd ~ && curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get install nodejs build-essential -y --no-install-recommends
 RUN npm install -g pm2
