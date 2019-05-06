@@ -3,6 +3,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/sccagg5/dialogflowsentimentanalyser/badge)](https://www.codefactor.io/repository/github/sccagg5/dialogflowsentimentanalyser)
 [![codebeat badge](https://codebeat.co/badges/0fd0d0b5-ca45-4452-9d05-f048323d3bd0)](https://codebeat.co/projects/github-com-sccagg5-dialogflowsentimentanalyser-master)
 [![BCH compliance](https://bettercodehub.com/edge/badge/SCcagg5/DialogFlowSentimentAnalyser?branch=master)](https://bettercodehub.com/)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/eliotctl/dialogflowsentimentanalyser-back.svg?label=docker%20back-end)
 
 # The App:
 
