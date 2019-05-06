@@ -1,5 +1,6 @@
 # Sentiments analyser app
----
+
+[![CodeFactor](https://www.codefactor.io/repository/github/sccagg5/dialogflowsentimentanalyser/badge)](https://www.codefactor.io/repository/github/sccagg5/dialogflowsentimentanalyser)
 
 # The App:
 
