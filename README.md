@@ -7,6 +7,8 @@
 
 # The App:
 
+**THIS PROJECT IS OUTDATED AND WAS USING DIALOGFLOW UNTIL MAY 2019 (END OF API 1.0)**
+
 Create an account key and allow language API using:
  * https://console.cloud.google.com/apis/credentials/serviceaccountkey
  * https://console.cloud.google.com/apis/api/language.googleapis.com
